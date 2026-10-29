@@ -57,6 +57,10 @@ def main():
 
     print(f"Confusion matrix saved to: {output_file.resolve()}")
 
+    model_file = output_dir / "model.joblib"
+    import joblib; joblib.dump(model, model_file)
+    print(f"Trained model saved to: {model_file.resolve()}")
+
 
 if __name__ == "__main__":
     main()
